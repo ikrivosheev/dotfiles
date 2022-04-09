@@ -117,13 +117,9 @@ command_exists () {
     type "$1" &> /dev/null ;
 }
 
-# rust"
-export CARGO_HOME="$XDG_DATA_HOME/cargo"
-export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
-if [ -d "$CARGO_HOME" ]
-then
-    export PATH="$CARGO_HOME/bin:$PATH"
-fi
+XDG_CONFIG_HOME="${XDG_CONFIG_COME}:-$HOME/.configs"
+XDG_CACHE_HOME="${XDG_CACHE_HOME}:-$HOME/.cache"
+XDG_DATA_HOME="${XDG_DATA_HOME}:-$HOME/.local/share"
 
 alias xclip-copy="xclip -selection clipboard"
 alias wget="wget --hsts-file $XDG_CONFIG_HOME/wget/hsts"
@@ -144,13 +140,12 @@ export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/startup.py"
 
 # gdb
 export GDBHISTFILE="$XDG_CACHE_HOME/gdb_history"
-alias gdb='gdb -nh -x "$XDG_CONFIG_HOME/gdb/init"'
+alias gdb='gdb -nh -x "$CONFIG_HOME/gdb/init"'
 
 # completion 
-for file in "$HOME/.local/share/bash_compeletion/"* ; do
+for file in "$XDG_DATA_HOME/bash_completion/completions/"* ; do
     if [ -f "$file" ]
     then
         source "$file"
     fi
 done
-

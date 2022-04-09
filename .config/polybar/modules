@@ -17,7 +17,7 @@ format = %{A1:~/.config/polybar/scripts/calendar.sh:} <label> %{A}
 
 [module/battery]
 type = internal/battery
-battery = BAT1
+battery = BAT0
 adapter = ACAD
 full-at = 98
 label-font = 2
@@ -41,7 +41,7 @@ format-discharging-underline = ${colors.battery}
 
 [module/wlan]
 type = internal/network
-interface = wlo1
+interface = wlp0s20f3
 interval = 1.5
 
 format-connected = <ramp-signal> <label-connected>

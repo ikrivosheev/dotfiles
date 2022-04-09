@@ -1,9 +1,11 @@
 *
 !.bashrc
+!.profile
 !.colors
 !.Xkbmap
 !.gitignore
 !.SpaceVim.d/init.toml
+!.config/requirements.txt
 !.config/alacritty/*
 !.config/dunst/*
 !.config/i3/*
