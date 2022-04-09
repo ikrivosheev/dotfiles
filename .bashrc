@@ -117,9 +117,9 @@ command_exists () {
     type "$1" &> /dev/null ;
 }
 
-XDG_CONFIG_HOME="${XDG_CONFIG_COME}:-$HOME/.configs"
-XDG_CACHE_HOME="${XDG_CACHE_HOME}:-$HOME/.cache"
-XDG_DATA_HOME="${XDG_DATA_HOME}:-$HOME/.local/share"
+XDG_CONFIG_HOME="${XDG_CONFIG_COME:-$HOME/.config}"
+XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
+XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
 
 alias xclip-copy="xclip -selection clipboard"
 alias wget="wget --hsts-file $XDG_CONFIG_HOME/wget/hsts"
@@ -128,15 +128,11 @@ export EDITOR="$(which nvim)" || "$(which vim)"
 export VISUAL="$(which nvim)" || "$(which vim)"
 export PAGER="$(which less)"
 
-# SpaceVim
-export PYTHON_HOST_PROG="$HOME/.pyenv/versions/neovim2/bin/python"
-export PYTHON3_HOST_PROG="$HOME/.pyenv/versions/neovim3/bin/python"
-
 # less history
 export LESSHISTFILE="$XDG_CACHE_HOME/less_history"
 
 # python
-export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/startup.py"
+# export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/startup.py"
 
 # gdb
 export GDBHISTFILE="$XDG_CACHE_HOME/gdb_history"
