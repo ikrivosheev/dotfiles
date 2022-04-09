@@ -1,15 +1,15 @@
 [user]
-	email = py.krivosheev@gmail.com
-	name = Ivan Krivosheev
+    email = py.krivosheev@gmail.com
+    name = Ivan Krivosheev
 
 [core]
-	editor = nvim
+    editor = nvim
 
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
 
 [difftool]
     prompt = true
@@ -21,10 +21,10 @@
     cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 
 [merge]
-	tool = nvimdiff
+    tool = nvimdiff
 
 [mergetool]
-	keepBackup = false
+    keepBackup = false
 
 [mergetool "nvimdiff"]
-	cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+    cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'

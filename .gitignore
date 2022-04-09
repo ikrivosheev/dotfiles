@@ -9,6 +9,7 @@
 !.config/alacritty/*
 !.config/dunst/*
 !.config/i3/*
+!.config/git/*
 !.config/polybar/*
 !.config/rofi/*
 !.config/gtk-3.0/*

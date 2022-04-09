@@ -1,7 +1,9 @@
+dunst
 polybar 
 pa-notify 
 batify2
 pavucontrol 
+network-manager-applet
 
 ttf-caladea 
 ttf-dejavu 
@@ -31,3 +33,8 @@ hunspell-ru
 
 xorg-xbacklight
 yad
+i3lock-fancy-git
+scrot
+upower
+dmidecode
+yandex-disk
