@@ -1,0 +1,15 @@
+*
+!.bashrc
+!.Xkbmap
+!.gitignore
+!.SpaceVim.d/init.toml
+!.config/alacritty/*
+!.config/dunst/*
+!.config/i3/*
+!.config/polybar/*
+!.config/rofi/*
+!.config/systemd/user/wm.target
+!.config/systemd/user/*.service
+!.local/bin/i3-tools
+!.local/bin/startup
+
