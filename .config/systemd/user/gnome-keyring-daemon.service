@@ -1,0 +1,10 @@
+[Unit]
+Description=Gnome Keyring Daemon
+Documentation=man:gnome-keyring-deamon(1)
+
+[Service]
+ExecStart=gnome-keyring-daemon -f --start --components=gpg,pkcs11,secrets,ssh
+Restart=on-abort
+
+[Install]
+WantedBy=wm.target

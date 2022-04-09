@@ -1,0 +1,11 @@
+[Unit]
+Description=PulseAudio notification daemon
+Documentation=man:pa-notify(1)
+PartOf=wm.target
+
+[Service]
+ExecStart=/bin/pa-notify
+Restart=on-abort
+
+[Install]
+WantedBy=wm.target

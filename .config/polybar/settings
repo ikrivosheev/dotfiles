@@ -1,0 +1,10 @@
+[colors]
+background = #000000
+foreground = #eaeaea
+
+date = #e6c547
+battery = #d54e53
+wlan = #54ced6
+xkeyboard = #70c0ba
+xbacklight = #b9ca4a
+volume = #7aa6da

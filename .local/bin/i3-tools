@@ -1,0 +1,71 @@
+#!/bin/bash
+
+lock() {
+    dunstctl set-paused true
+    i3lock-fancy
+    dunstctl set-paused toggle
+}
+
+screenshot-full-screen() {
+    local path="$(scrot -e 'echo -n $f' "$HOME"/Pictures/'%Y-%m-%d-%H%M%S_$wx$h.png')"
+    echo -n "$path" | xclip -selection clipboard
+    notify-send -a "scrot" "Screenshot full screen" "$path" 
+}
+
+screenshot-focused() {
+    local path="$(scrot -e 'echo -n $f' --focused "$HOME"/Pictures/'%Y-%m-%d-%H%M%S-focused_$wx$h.png')"
+    echo -n "$path" | xclip -selection clipboard
+    notify-send -a "scrot" "Screenshot focused window" "$path"
+}
+
+screenshot-select() {
+    local path="$(scrot -e 'echo -n $f' --select "$HOME"/Pictures/'%Y-%m-%d-%H%M%S-select_$wx$h.png')"
+    echo -n "$path" | xclip -selection clipboard
+    notify-send -a "scrot" "Screenshot selected an area" "$path"
+
+}
+
+case $1 in 
+    lock)
+        lock
+        ;;
+    logout)
+        loginctl terminate-session $XDG_SESSION_ID
+        ;;
+    suspend)
+        systemctl suspend-then-hibernate
+        ;;
+    hibernate)
+        systemctl hibernate
+        ;;
+    reboot)
+        systemctl reboot
+        ;;
+    shutdown)
+        systemctl poweroff
+        ;;
+    notify-pause)
+        dunstctl set-paused true
+        ;;
+    notify-resume)
+        dunstctl set-paused false
+        ;;
+    notify-toogle)
+        dunstctl set-paused toggle
+        ;;
+    screenshot-full-screen)
+        screenshot-full-screen
+        ;;
+    screenshot-focused)
+        screenshot-focused
+        ;;
+    screenshot-select)
+        screenshot-select
+        ;;
+    *)
+        echo "Usage: $0 {lock|logout|suspend|hibernate|reboot|shutdown|notify-pause|notify-resume|screenshot-full-screen|screenshot-focused|screenshot-select}"
+        exit 1
+esac
+
+exit 0
+
