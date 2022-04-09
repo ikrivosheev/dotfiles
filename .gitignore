@@ -1,5 +1,6 @@
 *
 !.bashrc
+!.colors
 !.Xkbmap
 !.gitignore
 !.SpaceVim.d/init.toml
