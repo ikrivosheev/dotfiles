@@ -117,6 +117,9 @@ command_exists () {
     type "$1" &> /dev/null ;
 }
 
+export PYTHON_HOST_PROG="$HOME/.pyenv/versions/neovim2/bin/python"
+export PYTHON3_HOST_PROG="$HOME/.pyenv/versions/neovim3/bin/python"
+
 XDG_CONFIG_HOME="${XDG_CONFIG_COME:-$HOME/.config}"
 XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
 XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"

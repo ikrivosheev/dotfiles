@@ -44,6 +44,8 @@
 
     project_rooter_patterns = ['Cargo.toml', '.SpaceVim.d/', '.git/', '.clang']
     project_rooter_outermost = false
+    
+    autocomplete_method = "deoplete"
 
 [[layers]]
 name = 'shell'
@@ -62,6 +64,9 @@ name = "sudo"
 
 [[layers]]
 name = "leaderf"
+
+[[layers]]
+name = "autocomplete"
 
 [[layers]]
 name = "lsp"
@@ -89,7 +94,4 @@ name = "lang#extra"
 
 [[layers]]
 name = "lang#toml"
-
-[[layers]]
-  name = "autocomplete"
 
