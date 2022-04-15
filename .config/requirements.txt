@@ -1,6 +1,7 @@
 dunst
 polybar 
 pa-notify 
+xbacklight-notify
 batify2
 pavucontrol 
 network-manager-applet
