@@ -37,4 +37,5 @@ i3lock-fancy-git
 scrot
 upower
 dmidecode
+xss-lock
 yandex-disk
