@@ -4,7 +4,7 @@ Documentation=man:pa-notify(1)
 PartOf=wm.target
 
 [Service]
-ExecStart=/bin/pa-notify
+ExecStart=/bin/pa-notify -t 5
 Restart=on-abort
 
 [Install]
