@@ -18,6 +18,7 @@ ttf-unifont
 siji-git 
 ttf-ubuntu-font-family
 
+vlc
 firefox
 file-roller 
 font-manager 
@@ -27,6 +28,7 @@ evince
 nm-connection-editor 
 pycharm-professional 
 zoom 
+
 libreoffice-still 
 hunspell 
 hunspell-en_us 
