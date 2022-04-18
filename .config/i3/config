@@ -123,6 +123,9 @@ bindsym $mod+Control+0 workspace $ws10
 bindsym $mod+Control+Left workspace prev
 bindsym $mod+Control+Right workspace next
 
+bindsym $mod+Control+j workspace prev
+bindsym $mod+Control+colon workspace next
+
 # scratchpad
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+Shift+plus scratchpad show floating toggle
