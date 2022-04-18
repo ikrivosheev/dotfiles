@@ -4,6 +4,7 @@ pa-notify
 xbacklight-notify
 batify2
 pavucontrol 
+xss-lock
 network-manager-applet
 
 ttf-caladea 
@@ -39,6 +40,6 @@ yad
 i3lock-fancy-git
 scrot
 upower
+dnsutils
 dmidecode
-xss-lock
 yandex-disk
