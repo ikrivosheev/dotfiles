@@ -120,7 +120,7 @@ command_exists () {
 export PYTHON_HOST_PROG="$HOME/.pyenv/versions/neovim2/bin/python"
 export PYTHON3_HOST_PROG="$HOME/.pyenv/versions/neovim3/bin/python"
 
-XDG_CONFIG_HOME="${XDG_CONFIG_COME:-$HOME/.config}"
+XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
 XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
 
@@ -139,7 +139,7 @@ export LESSHISTFILE="$XDG_CACHE_HOME/less_history"
 
 # gdb
 export GDBHISTFILE="$XDG_CACHE_HOME/gdb_history"
-alias gdb='gdb -nh -x "$CONFIG_HOME/gdb/init"'
+alias gdb='gdb -nh -x "$XDG_CONFIG_HOME/gdb/init"'
 
 # completion 
 for file in "$XDG_DATA_HOME/bash_completion/completions/"* ; do

@@ -5,6 +5,7 @@
 !.Xkbmap
 !.gitignore
 !.SpaceVim.d/init.toml
+!.config/gdb/*
 !.config/requirements.txt
 !.config/alacritty/*
 !.config/dunst/*
