@@ -130,6 +130,7 @@ alias wget="wget --hsts-file $XDG_CONFIG_HOME/wget/hsts"
 export EDITOR="$(which nvim)" || "$(which vim)"
 export VISUAL="$(which nvim)" || "$(which vim)"
 export PAGER="$(which less)"
+export VIEWER="$(which less)"
 
 # less history
 export LESSHISTFILE="$XDG_CACHE_HOME/less_history"
