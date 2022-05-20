@@ -149,3 +149,6 @@ for file in "$XDG_DATA_HOME/bash_completion/completions/"* ; do
         source "$file"
     fi
 done
+
+# Postgresql env
+export PSQL_HISTORY="$XDG_CACHE_HOME/psql_history"
