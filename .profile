@@ -9,9 +9,12 @@ then
     export PATH="$CARGO_HOME/bin:$PATH"
 fi
 
-export $(gnome-keyring-daemon —start —components=pkcs11,secrets,ssh,gpg)
-export $(dbus-launch)
+eval $(gnome-keyring-daemon --start)
+export SSH_AUTH_SOCK
 
 # Terminal
 export TERMINAL="alacritty -e"
+
+# Disable at spi2 service start
+export NO_AT_BRIDGE=1
 
