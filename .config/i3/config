@@ -234,13 +234,13 @@ for_window [class="Yad"]                    floating enable, move down 25px, mov
 assign [class="TelegramDesktop"] $ws1
 
 # Wireless settings
-exec_always --no-startup-id nm-applet
+exec --no-startup-id nm-applet
 # Background image
 exec --no-startup-id "feh --bg-scale /usr/share/pixmaps/archlinux-wallpaper.png"
 # XSS-LOCK
-exec_always --no-startup-id xss-lock -l $BIN_PATH/i3-tools lock
+exec --no-startup-id xss-lock -l $BIN_PATH/i3-tools lock
 # Polybar
-exec_always --no-startup-id polybar top -c $CONFIG_PATH/polybar/config
+exec --no-startup-id polybar top -c $CONFIG_PATH/polybar/config
 # Systemd target
 exec_always --no-startup-id "systemctl --user start wm.target"
 

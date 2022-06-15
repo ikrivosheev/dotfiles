@@ -18,6 +18,7 @@ adobe-source-serif-fonts
 ttf-unifont 
 siji-git 
 ttf-ubuntu-font-family
+gnome-icon-theme
 
 vlc
 firefox
