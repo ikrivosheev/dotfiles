@@ -66,18 +66,15 @@ name = "sudo"
 name = "leaderf"
 
 [[layers]]
-name = "autocomplete"
-
-[[layers]]
 name = "lsp"
 filetypes = [
     "rust",
     "c",
     "cpp",
 ]
-enabled_clients = ['vimls', 'clangd', 'rust_analyzer']
-    [layers.override_cmd]
-        rust = ["rust-analyzer"]
+enabled_clients = ['clangd', 'rust_analyzer']
+    [layers.override_client_cmds]
+        rust_analyzer = ["rust-analyzer"]
 
 [[layers]]
 name = "lang#c"
