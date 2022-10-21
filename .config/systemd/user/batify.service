@@ -4,7 +4,7 @@ Documentation=man:batify(1)
 PartOf=wm.target
 
 [Service]
-ExecStart=/bin/batify -t 10
+ExecStart=/bin/batify -t 5 --critical-level 4
 Restart=on-abort
 
 [Install]
