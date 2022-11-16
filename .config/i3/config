@@ -233,6 +233,8 @@ for_window [class="Yad"]                    floating enable, move down 25px, mov
 # Assign programs to workspaces
 assign [class="TelegramDesktop"] $ws1
 
+# Picom
+exec --no-startup-id picom -b --config $CONFIG_PATH/picom/picom.conf
 # Wireless settings
 exec --no-startup-id nm-applet
 # Background image
