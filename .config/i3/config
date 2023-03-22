@@ -228,7 +228,7 @@ for_window [window_role="browser-window"]   floating enable
 for_window [class="^jetbrains-.+"][window_type=dialog] floating enable, focus, border normal
 for_window [class="Nm-connection-editor"]   floating enable
 for_window [class="skype"]                  floating enable
-for_window [class="Yad"]                    floating enable, move down 25px, move left 50px
+for_window [class="Yad"]                    floating enable, move down 10px, move left 50px
 
 # Assign programs to workspaces
 assign [class="TelegramDesktop"] $ws1
