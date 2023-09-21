@@ -143,7 +143,7 @@ export GDBHISTFILE="$XDG_CACHE_HOME/gdb_history"
 alias gdb='gdb -nh -x "$XDG_CONFIG_HOME/gdb/init"'
 
 # completion 
-for file in "$XDG_DATA_HOME/bash_completion/completions/"* ; do
+for file in "$XDG_DATA_HOME/bash-completion/completions/"* ; do
     if [ -f "$file" ]
     then
         source "$file"
