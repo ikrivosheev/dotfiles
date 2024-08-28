@@ -1,4 +1,3 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -103,17 +102,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
-# pyenv
-if [ -d "$HOME/.pyenv" ] 
-then
-    export PATH="$HOME/.pyenv/bin:$PATH"
-    export PYENV_ROOT="$(pyenv root)"
-    eval "$(pyenv init -)"
-    eval "$(pyenv init --path)"
-    eval "$(pyenv virtualenv-init -)"
-fi
-
 command_exists () {
     type "$1" &> /dev/null ;
 }
@@ -156,3 +144,4 @@ export PSQL_HISTORY="$XDG_CACHE_HOME/psql_history"
 
 # GPG
 export GPG_TTY=$(tty)
+

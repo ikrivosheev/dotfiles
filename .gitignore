@@ -20,4 +20,4 @@
 !\.config/systemd/user/*.service
 !\.local/bin/i3-tools
 !\.local/bin/startup
-
+!\.local/share/bash-completion/completions/*

@@ -18,3 +18,4 @@ export TERMINAL="alacritty -e"
 # Disable at spi2 service start
 export NO_AT_BRIDGE=1
 
+. "/home/ikrivosheev/.local/share/cargo/env"
