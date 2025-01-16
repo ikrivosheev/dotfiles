@@ -1,4 +1,3 @@
-*
 !\.bashrc
 !\.profile
 !\.xinitrc
@@ -16,8 +15,8 @@
 !\.config/rofi/*
 !\.config/gtk-3.0/
 !\.config/gtk-4.0/
-!\.config/systemd/user/wm.target
 !\.config/systemd/user/*.service
 !\.local/bin/i3-tools
 !\.local/bin/startup
 !\.local/share/bash-completion/completions/*
+*

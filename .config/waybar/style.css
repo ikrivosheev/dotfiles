@@ -1,0 +1,13 @@
+* {
+    font-family: Ubuntu, Siji;
+    font-size: 10px;
+}
+
+window#waybar {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #eaeaea;
+}
+
+#battery {
+    color: #d54e53;
+}

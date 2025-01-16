@@ -106,6 +106,16 @@ command_exists () {
     type "$1" &> /dev/null ;
 }
 
+# pyenv
+if [ -d "$HOME/.pyenv" ] 
+then
+    export PATH="$HOME/.pyenv/bin:$PATH"
+    export PYENV_ROOT="$(pyenv root)"
+    eval "$(pyenv init -)"
+    eval "$(pyenv init --path)"
+    eval "$(pyenv virtualenv-init -)"
+fi
+
 export PYTHON3_HOST_PROG="$HOME/.pyenv/versions/neovim3/bin/python"
 
 XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"

@@ -1,11 +1,13 @@
 [Unit]
 Description=PulseAudio notification daemon
 Documentation=man:pa-notify(1)
-PartOf=wm.target
+PartOf=graphical-session.target
+After=graphical-session.target
+Requisite=graphical-session.target
 
 [Service]
 ExecStart=/bin/pa-notify -t 5
 Restart=on-abort
 
 [Install]
-WantedBy=wm.target
+WantedBy=dunst.service
