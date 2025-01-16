@@ -99,9 +99,9 @@
     "format" : "⏻ ",
     "tooltip": false,
     "menu": "on-click",
-    "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+    "menu-file": "$XDG_CONFIG_HOME/waybar/power_menu.xml", // Menu file in resources folder
     "menu-actions": {
-      "lock": "gtklook",
+      "lock": "gtklock",
       "shutdown": "shutdown",
       "reboot": "reboot",
       "suspend": "systemctl suspend",

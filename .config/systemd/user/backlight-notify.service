@@ -1,0 +1,13 @@
+[Unit]
+Description=Backlight notification daemon
+Documentation=man:backlight-notify(1)
+PartOf=graphical-session.target
+After=graphical-session.target
+Requisite=graphical-session.target
+
+[Service]
+ExecStart=/bin/backlight-notify -b intel_backlight -t 5
+Restart=on-abort
+
+[Install]
+WantedBy=dunst.service

@@ -1,0 +1,12 @@
+[Unit]
+Description=Daemon to start shadowsocks client
+PartOf=graphical-session.target
+After=graphical-session.target
+Requisite=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/bin/sslocal -c /home/ikrivosheev/.config/shadowsocks/config.json
+
+[Install]
+WantedBy=niri.service
