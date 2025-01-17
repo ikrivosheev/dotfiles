@@ -31,7 +31,7 @@
     "spacing": 4
   },
   "clock": {
-    "format": " {:%Y-%m-%d %H:%M}",
+    "format": "<span color='#e6c547'> </span> {:%Y-%m-%d %H:%M}",
     "tooltip-format": "<tt><big>{calendar}</big></tt>",
     "calendar": {
       "on-scroll": 1,
@@ -52,7 +52,7 @@
   },
   "backlight": {
       "device": "intel_backlight",
-      "format": "{icon} {percent}%",
+      "format": "<span color='#b9ca4a'>{icon}</span> {percent}%",
       "format-icons": ["", "", ""],
       "on-scroll-up": "xbacklight -inc 1",
       "on-scroll-down": "xbacklight -dec 1",
@@ -68,27 +68,25 @@
     },
     "full-at": 79,
     "format-time": "{H}:{m}",
-    "format": "{icon} {capacity}%",
-    "format-full": "{capacity}% {icon}",
-    "format-charging": "{capacity}%  ",
-    "format-discharging": "{capacity}% {icon}",
+    "format": "<span color='#d54e53'>{icon}</span> {capacity}%",
+    "format-charging": "<span color='#d54e53'> </span> {capacity}%",
     "format-alt": "{time} {icon}",
     "format-icons": ["", "", "", "", "", "", "", "", ""]
   },
   "network": {
     "interface": "wlp0*",
     "interval": 15,
-    "format-wifi": "{icon} {essid}",
+    "format-wifi": "<span color='#54ced6'>{icon}</span> {essid}",
     "format-icons": ["", "", ""],
     "tooltip-format": "{ifname} {ipaddr}/{cidr}",
     "on-click": "nm-connection-editor"
   },
   "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-bluetooth": "{icon} {volume}%",
-    "format-bluetooth-muted": "",
-    "format-muted": "",
-    "format-source": "{volume}% ",
+    "format": "<span color='#7aa6da'>{icon}</span> {volume}%",
+    "format-bluetooth": "<span color='#7aa6da'>{icon}</span> {volume}%",
+    "format-bluetooth-muted": "<span color='#7aa6da'></span>",
+    "format-muted": "<span color='#7aa6da'></span>",
+    "format-source": "{volume}%",
     "format-source-muted": "",
     "format-icons": {
         "headphone": "",

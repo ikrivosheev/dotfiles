@@ -30,6 +30,7 @@ window#waybar {
   border-bottom: 2px solid #e6c547;
 }
 
+
 #language {
   color: #70c0ba;
 
@@ -37,26 +38,18 @@ window#waybar {
 }
 
 #backlight {
-  color: #b9ca4a;
-
   border-bottom: 2px solid #b9ca4a;
 }
 
 #pulseaudio {
-  color: #7aa6da;
-
   border-bottom: 2px solid #7aa6da;
 }
 
 #battery {
-  color: #d54e53;
-
   border-bottom: 2px solid #d53e53;
 }
 
 #network {
-  color: #54ced6;
-
   border-bottom: 2px solid #54ced6;
 }
 
