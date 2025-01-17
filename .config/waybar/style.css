@@ -1,13 +1,65 @@
 * {
-    font-family: Ubuntu, Siji;
-    font-size: 10px;
+    font-family: Fira Code, siji;
+    font-size: 12px;
+
+    border: none;
+    border-radius: 0;
+
+    padding: 0 1 0 1;
+    margin: 0 1 0 1;
 }
 
 window#waybar {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #eaeaea;
+  background-color: rgba(0, 0, 0, 1);
+  color: #eaeaea;
+}
+
+#workspaces button {
+  padding: 2 2;
+}
+
+#workspaces button.focused {
+  background-color: #383838;
+  color: #fff;
+
+  border-bottom: 2px solid #fba922;
+}
+
+
+#clock {
+  border-bottom: 2px solid #e6c547;
+}
+
+#language {
+  color: #70c0ba;
+
+  border-bottom: 2px solid #70c0ba;
+}
+
+#backlight {
+  color: #b9ca4a;
+
+  border-bottom: 2px solid #b9ca4a;
+}
+
+#pulseaudio {
+  color: #7aa6da;
+
+  border-bottom: 2px solid #7aa6da;
 }
 
 #battery {
-    color: #d54e53;
+  color: #d54e53;
+
+  border-bottom: 2px solid #d53e53;
 }
+
+#network {
+  color: #54ced6;
+
+  border-bottom: 2px solid #54ced6;
+}
+
+#custom-power {
+}
+

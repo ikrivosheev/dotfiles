@@ -261,7 +261,7 @@ window-rule {
 }
 
 window-rule {
-   match app-id="jetbrains-rustrover" title="(New|Copy|Settings|Run|Add|Rename|Delete)"
+   match app-id="jetbrains-rustrover" title="(New|Copy|Settings|Run|Add|Rename|Delete|Open|Find)"
 
    open-floating true
    open-focused true

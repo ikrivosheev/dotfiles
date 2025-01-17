@@ -28,11 +28,10 @@
     }
   },
   "tray": {
-    // "icon-size": 21,
-    "spacing": 10
+    "spacing": 4
   },
   "clock": {
-    "format": "{:%Y-%m-%d %H:%M}",
+    "format": " {:%Y-%m-%d %H:%M}",
     "tooltip-format": "<tt><big>{calendar}</big></tt>",
     "calendar": {
       "on-scroll": 1,
@@ -53,40 +52,42 @@
   },
   "backlight": {
       "device": "intel_backlight",
-      "format": "{percent}% {icon}",
-      "format-icons": ["", "", "", "", "", "", "", "", ""]
+      "format": "{icon} {percent}%",
+      "format-icons": ["", "", ""],
+      "on-scroll-up": "xbacklight -inc 1",
+      "on-scroll-down": "xbacklight -dec 1",
+      "tooltip": false
   },
   "battery": {
     "bat": "BAT0",
+    "interval": 15,
     "states": {
-        // "good": 95,
+        "good": 75,
         "warning": 30,
-        "critical": 15
+        "critical": 5
     },
-    "format": "{capacity}% {icon}",
+    "full-at": 79,
+    "format-time": "{H}:{m}",
+    "format": "{icon} {capacity}%",
     "format-full": "{capacity}% {icon}",
-    "format-charging": "{capacity}% ",
-    "format-plugged": "{capacity}% ",
+    "format-charging": "{capacity}%  ",
+    "format-discharging": "{capacity}% {icon}",
     "format-alt": "{time} {icon}",
-    // "format-good": "", // An empty format will hide the module
-    // "format-full": "",
-    "format-icons": ["", "", "", "", ""]
+    "format-icons": ["", "", "", "", "", "", "", "", ""]
   },
   "network": {
-    // "interface": "wlp2*", // (Optional) To force the use of this interface
-    "format-wifi": "{essid} ({signalStrength}%) ",
-    "format-ethernet": "{ipaddr}/{cidr} ",
-    "tooltip-format": "{ifname} via {gwaddr} ",
-    "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "Disconnected ⚠",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    "interface": "wlp0*",
+    "interval": 15,
+    "format-wifi": "{icon} {essid}",
+    "format-icons": ["", "", ""],
+    "tooltip-format": "{ifname} {ipaddr}/{cidr}",
+    "on-click": "nm-connection-editor"
   },
   "pulseaudio": {
-    "scroll-step": 1, // %, can be a float
-    "format": "{volume}% {icon} {format_source}",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": " {format_source}",
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-bluetooth-muted": "",
+    "format-muted": "",
     "format-source": "{volume}% ",
     "format-source-muted": "",
     "format-icons": {
