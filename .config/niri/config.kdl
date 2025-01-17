@@ -45,6 +45,8 @@ input {
         // scroll-button 273
         // middle-emulation
     }
+    
+    disable-power-key-handling
 
     // Uncomment this to make the mouse warp to the center of newly focused windows.
     // warp-mouse-to-focus
@@ -238,15 +240,17 @@ animations {
 
 // Open the Firefox picture-in-picture player as floating by default.
 window-rule {
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    open-floating true
+  match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+
+  open-floating true
+  open-focused true
 }
 
 window-rule {
-    match app-id=r#"firefox$"#
-    match app-id=r#"org\.telegram\.desktop$"#
+  match app-id=r#"firefox$"#
+  match app-id=r#"org\.telegram\.desktop$"#
 
-    open-maximized true
+  open-maximized true
 }
 
 // Example: enable rounded corners for all windows.
@@ -257,9 +261,10 @@ window-rule {
 }
 
 window-rule {
-   match app-id="jetbrains-rustrover" title="(New|Copy|Settings|Run)"
+   match app-id="jetbrains-rustrover" title="(New|Copy|Settings|Run|Add|Rename|Delete)"
 
    open-floating true
+   open-focused true
 }
 
 binds {
@@ -279,7 +284,7 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T { spawn "alacritty"; }
-    Mod+D { spawn "fuzzel"; }
+    Mod+D { spawn "rofi" "-show" "drun"; }
     Super+Alt+L { spawn "gtklock"; }
     Super+Alt+H { spawn "systemctl" "suspend-then-hibernate"; }
 
