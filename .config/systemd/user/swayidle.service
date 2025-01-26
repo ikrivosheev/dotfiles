@@ -7,7 +7,10 @@ Requisite=graphical-session.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/swayidle -w before-sleep 'gtklock'
+ExecStart=/usr/bin/swayidle -w \
+          timeout 180 'tools.sh lock' \
+          timeout 300 'tools.sh suspend' \
+          before-sleep 'tools.sh lock'
 
 [Install]
 WantedBy=niri.service

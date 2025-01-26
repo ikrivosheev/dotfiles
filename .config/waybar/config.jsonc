@@ -69,7 +69,7 @@
     "full-at": 79,
     "format-time": "{H}:{m}",
     "format": "<span color='#d54e53'>{icon}</span> {capacity}%",
-    "format-charging": "<span color='#d54e53'> </span> {capacity}%",
+    "format-charging": "<span color='#d54e53'></span> {capacity}%",
     "format-alt": "{time} {icon}",
     "format-icons": ["", "", "", "", "", "", "", "", ""]
   },
@@ -100,11 +100,11 @@
     "menu": "on-click",
     "menu-file": "$XDG_CONFIG_HOME/waybar/power_menu.xml", // Menu file in resources folder
     "menu-actions": {
-      "lock": "gtklock",
-      "shutdown": "shutdown",
-      "reboot": "reboot",
-      "suspend": "systemctl suspend",
-      "hibernate": "systemctl hibernate"
+      "lock": "tools.sh lock",
+      "shutdown": "tools.sh shutdown",
+      "reboot": "tools.sh reboot",
+      "suspend": "tools.sh suspend",
+      "hibernate": "tools.sh hibernate"
     }
   }
 }

@@ -2,7 +2,6 @@
 !\.profile
 !\.xinitrc
 !\.colors
-!\.Xkbmap
 !\.gitignore
 !\.SpaceVim.d/init.toml
 !\.config/gdb/*
@@ -16,7 +15,6 @@
 !\.config/gtk-3.0/
 !\.config/gtk-4.0/
 !\.config/systemd/user/*.service
-!\.local/bin/i3-tools
-!\.local/bin/startup
+!\.local/bin/tools.sh
 !\.local/share/bash-completion/completions/*
 *
