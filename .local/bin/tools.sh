@@ -12,10 +12,11 @@ lock() {
 	--indicator-thickness 7 \
 	--effect-blur 7x5 \
 	--effect-vignette 0.5:0.5 
-
+  
+  dunstctl set-paused false
 }
 
-after-resume() {
+unlock() {
   dunstctl set-paused false
 }
 
@@ -24,8 +25,8 @@ case $1 in
     lock)
         lock
         ;;
-    after-resume)
-        after-resume
+    unlock)
+        unlock
         ;;
     logout)
         loginctl terminate-session $XDG_SESSION_ID
@@ -43,7 +44,7 @@ case $1 in
         systemctl poweroff
         ;;
     *)
-        echo "Usage: $0 {lock|after-resume|logout|suspend|hibernate|reboot|shutdown}"
+        echo "Usage: $0 {lock|unlock|logout|suspend|hibernate|reboot|shutdown}"
         exit 1
 esac
 
