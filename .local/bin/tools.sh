@@ -12,11 +12,11 @@ lock() {
 	--indicator-thickness 7 \
 	--effect-blur 7x5 \
 	--effect-vignette 0.5:0.5 
-  
+
   dunstctl set-paused false
 }
 
-unlock() {
+unblank() {
   dunstctl set-paused false
 }
 
@@ -25,8 +25,8 @@ case $1 in
     lock)
         lock
         ;;
-    unlock)
-        unlock
+    unblank)
+        unblank
         ;;
     logout)
         loginctl terminate-session $XDG_SESSION_ID
@@ -49,3 +49,4 @@ case $1 in
 esac
 
 exit 0
+

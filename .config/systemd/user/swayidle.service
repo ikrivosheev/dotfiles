@@ -8,10 +8,11 @@ Requisite=graphical-session.target
 [Service]
 Type=simple
 ExecStart=/usr/bin/swayidle -w \
-          timeout 300 'tools.sh lock' \
-          timeout 600 'tools.sh suspend' \
-          before-sleep 'tools.sh lock' \
-          unlock 'tools.sh unlock'
+          timeout 300 'tools.sh lock' resume 'tools.sh unblank' \
+          timeout 600 'tools.sh suspend' resume 'tools.sh unblank' \
+          lock 'tools.sh lock' \
+          unlock 'tools.sh unlock' \
+          before-sleep 'tools.sh lock'
 
 [Install]
 WantedBy=niri.service
