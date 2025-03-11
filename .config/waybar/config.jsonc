@@ -70,7 +70,7 @@
     "format-time": "{H}:{m}",
     "format": "<span color='#d54e53'>{icon}</span> {capacity}%",
     "format-charging": "<span color='#d54e53'></span> {capacity}%",
-    "format-alt": "{time} {icon}",
+    "format-alt": "<span color='#d54e53'>{icon}</span> {time}",
     "format-icons": ["", "", "", "", "", "", "", "", ""]
   },
   "network": {
