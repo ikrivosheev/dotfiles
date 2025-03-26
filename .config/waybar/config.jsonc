@@ -95,7 +95,7 @@
     "on-click": "pavucontrol"
   },
   "custom/power": {
-    "format" : "⏻ ",
+    "format" : "⏻",
     "tooltip": false,
     "menu": "on-click",
     "menu-file": "$XDG_CONFIG_HOME/waybar/power_menu.xml", // Menu file in resources folder
