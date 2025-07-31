@@ -19,3 +19,4 @@ export TERMINAL="alacritty -e"
 export NO_AT_BRIDGE=1
 
 . "/home/ikrivosheev/.local/share/cargo/env"
+
