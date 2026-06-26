@@ -64,9 +64,8 @@ label.plugin.info {
 }
 
 .match:selected {
-    border-left: 4px solid @accent;
+    box-shadow: inset 4px 0 0 0 @accent;
     background: rgba(255, 255, 255, 0.05);
-    animation: fade 0.1s linear;
 }
 
 @keyframes fade {
