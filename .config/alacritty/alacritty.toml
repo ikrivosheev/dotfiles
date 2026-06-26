@@ -1,4 +1,3 @@
-
 [bell]
 animation = "EaseOutExpo"
 color = "0xffffff"
@@ -8,29 +7,29 @@ duration = 0
 draw_bold_text_with_bright_colors = true
 indexed_colors = []
 
-[colors.bright]
-black = "0x666666"
-blue = "0x7aa6da"
-cyan = "0x54ced6"
-green = "0x9ec400"
-magenta = "0xb77ee0"
-red = "0xff3334"
-white = "0xffffff"
-yellow = "0xe7c547"
+[colors.primary]
+background = "#131313"
+foreground = "#DDDDDD"
 
 [colors.normal]
-black = "0x000000"
-blue = "0x7aa6da"
-cyan = "0x70c0ba"
-green = "0xb9ca4a"
-magenta = "0xc397d8"
-red = "0xd54e53"
-white = "0xeaeaea"
-yellow = "0xe6c547"
+black = "#DDDDDD"
+red = "#c74028"
+green = "#62BA46"
+yellow = "#ded9b7"
+blue = "#c28b12"
+magenta = "#c72855"
+cyan = "#fdd888"
+white = "#131313"
 
-[colors.primary]
-background = "0x000000"
-foreground = "0xeaeaea"
+[colors.bright]
+black = "#57564F"
+red = "#e7988a"
+green = "#b0dca2"
+yellow = "#f0edde"
+blue = "#f1c464"
+magenta = "#efb0c2"
+cyan = "#fef1d5"
+white = "#303030"
 
 [cursor]
 style = "Block"
@@ -51,9 +50,7 @@ glyph_offset = { x = 0, y = 0 }
 
 [mouse]
 hide_when_typing = false
-bindings = [
-  { action = "PasteSelection", mouse = "Middle" }
-]
+bindings = [{ action = "PasteSelection", mouse = "Middle" }]
 
 [scrolling]
 history = 10000
@@ -65,12 +62,14 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 
 [window]
 class = "Alacritty"
-decorations = "full"
+decorations = "None"
 dynamic_padding = false
 dynamic_title = true
 startup_mode = "Windowed"
 title = "Alacritty"
 dimensions = { columns = 95, lines = 75 }
+opacity = 1
+padding = { x = 10, y = 10 }
 
 [general]
 live_config_reload = true
@@ -78,4 +77,3 @@ working_directory = "None"
 import = [
   "~/.config/alacritty/keybindings.toml",
 ]
-

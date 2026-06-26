@@ -45,7 +45,7 @@ input {
         // scroll-button 273
         // middle-emulation
     }
-    
+
     disable-power-key-handling
 
     // Uncomment this to make the mouse warp to the center of newly focused windows.
@@ -154,7 +154,7 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
-        active-color "#7fc8ff"
+        active-color "#a0a0a0"
 
         // Color of the ring on inactive monitors.
         inactive-color "#505050"
@@ -199,6 +199,10 @@ layout {
         // right 64
         // top 64
         // bottom 64
+    }
+
+    shadow {
+      on
     }
 }
 
@@ -255,9 +259,15 @@ window-rule {
 
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
-/-window-rule {
-    geometry-corner-radius 12
+window-rule {
+    geometry-corner-radius 8
     clip-to-geometry true
+}
+
+window-rule {
+    match is-active=false
+
+    opacity 0.90
 }
 
 binds {
@@ -277,7 +287,7 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T { spawn "alacritty"; }
-    Mod+D { spawn "rofi" "-show" "drun"; }
+    Mod+D { spawn "anyrun"; }
     Super+Alt+L { spawn "tools.sh" "lock"; }
     Super+Alt+H { spawn "tools.sh" "suspend"; }
 
@@ -489,4 +499,3 @@ binds {
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
 }
-

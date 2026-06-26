@@ -107,7 +107,7 @@ command_exists () {
 }
 
 # pyenv
-if [ -d "$HOME/.pyenv" ] 
+if [ -d "$HOME/.pyenv" ]
 then
     export PATH="$HOME/.pyenv/bin:$PATH"
     export PYENV_ROOT="$(pyenv root)"
@@ -133,13 +133,10 @@ export VIEWER="$(which less)"
 # less history
 export LESSHISTFILE="$XDG_CACHE_HOME/less_history"
 
-# python
-# export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/startup.py"
-
 # gdb
 export GDBHISTFILE="$XDG_CACHE_HOME/gdb_history"
 
-# completion 
+# completion
 for file in "$XDG_DATA_HOME/bash-completion/completions/"* ; do
     if [ -f "$file" ]
     then
@@ -153,4 +150,8 @@ export PSQL_HISTORY="$XDG_CACHE_HOME/psql_history"
 
 # GPG
 export GPG_TTY=$(tty)
+
+# kimi-code
+export KIMI_CODE_HOME="$XDG_CONFIG_HOME/kimi-code"
+export PATH="$KIMI_CODE_HOME/bin/:$PATH"
 

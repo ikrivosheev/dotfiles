@@ -3,13 +3,8 @@
   "layer": "top", // Waybar at top layer
   "height": 24,
   // Choose the order of the modules
-  "modules-left": [
-    "niri/workspaces",
-    "niri/window"
-  ],
-  "modules-center": [
-    "clock"
-  ],
+  "modules-left": ["niri/workspaces", "niri/window"],
+  "modules-center": ["clock"],
   "modules-right": [
     "idle_inhibitor",
     "niri/language",
@@ -18,20 +13,20 @@
     "battery",
     "network",
     "tray",
-    "custom/power"
+    "custom/power",
   ],
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
-        "activated": "",
-        "deactivated": ""
-    }
+      "activated": "",
+      "deactivated": "",
+    },
   },
   "tray": {
-    "spacing": 4
+    "spacing": 4,
   },
   "clock": {
-    "format": "<span color='#e6c547'> </span> {:%Y-%m-%d %H:%M}",
+    "format": "<span color='#ded9b7'> </span> {:%Y-%m-%d %H:%M}",
     "tooltip-format": "<tt><big>{calendar}</big></tt>",
     "calendar": {
       "on-scroll": 1,
@@ -41,61 +36,61 @@
         "days": "<span color='#ecc6d9'><b>{}</b></span>",
         "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
         "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
-      }
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>",
+      },
     },
-    "actions":  {
+    "actions": {
       "on-click-right": "mode",
       "on-scroll-up": "shift_up",
-      "on-scroll-down": "shift_down"
-    }
+      "on-scroll-down": "shift_down",
+    },
   },
   "backlight": {
-      "device": "intel_backlight",
-      "format": "<span color='#b9ca4a'>{icon}</span> {percent}%",
-      "format-icons": ["", "", ""],
-      "on-scroll-up": "xbacklight -inc 1",
-      "on-scroll-down": "xbacklight -dec 1",
-      "tooltip": false
+    "device": "intel_backlight",
+    "format": "<span color='#62BA46'>{icon}</span> {percent}%",
+    "format-icons": ["", "", ""],
+    "on-scroll-up": "xbacklight -inc 1",
+    "on-scroll-down": "xbacklight -dec 1",
+    "tooltip": false,
   },
   "battery": {
     "bat": "BAT0",
     "interval": 15,
     "states": {
-        "good": 75,
-        "warning": 30,
-        "critical": 5
+      "good": 75,
+      "warning": 30,
+      "critical": 5,
     },
     "full-at": 79,
     "format-time": "{H}:{m}",
-    "format": "<span color='#d54e53'>{icon}</span> {capacity}%",
-    "format-charging": "<span color='#d54e53'></span> {capacity}%",
-    "format-alt": "<span color='#d54e53'>{icon}</span> {time}",
-    "format-icons": ["", "", "", "", "", "", "", "", ""]
+    "format": "<span color='#c74028'>{icon}</span> {capacity}%",
+    "format-charging": "<span color='#c74028'></span> {capacity}%",
+    "format-alt": "<span color='#c74028'>{icon}</span> {time}",
+    "format-icons": ["", "", "", "", ""],
   },
   "network": {
     "interface": "wlp0*",
     "interval": 15,
-    "format-wifi": "<span color='#54ced6'>{icon}</span> {essid}",
-    "format-icons": ["", "", ""],
+    "format-wifi": "<span color='#fdd888'>{icon}</span> {essid}",
+    "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
     "tooltip-format": "{ifname} {ipaddr}/{cidr}",
-    "on-click": "nm-connection-editor"
+    "on-click": "nm-connection-editor",
   },
   "pulseaudio": {
-    "format": "<span color='#7aa6da'>{icon}</span> {volume}%",
-    "format-bluetooth": "<span color='#7aa6da'>{icon}</span> {volume}%",
-    "format-bluetooth-muted": "<span color='#7aa6da'></span>",
-    "format-muted": "<span color='#7aa6da'></span>",
+    "format": "<span color='#c28b12'>{icon}</span> {volume}%",
+    "format-bluetooth": "<span color='#c28b12'>{icon}</span> {volume}%",
+    "format-bluetooth-muted": "<span color='#c28b12'></span>",
+    "format-muted": "<span color='#c28b12'></span>",
     "format-source": "{volume}%",
-    "format-source-muted": "",
+    "format-source-muted": "",
     "format-icons": {
-        "headphone": "",
-        "default": ["", "", ""]
+      "headphone": "",
+      "default": ["", "", ""],
     },
-    "on-click": "pavucontrol"
+    "on-click": "pavucontrol",
   },
   "custom/power": {
-    "format" : "⏻",
+    "format": "⏻",
     "tooltip": false,
     "menu": "on-click",
     "menu-file": "$XDG_CONFIG_HOME/waybar/power_menu.xml", // Menu file in resources folder
@@ -104,7 +99,7 @@
       "shutdown": "tools.sh shutdown",
       "reboot": "tools.sh reboot",
       "suspend": "tools.sh suspend",
-      "hibernate": "tools.sh hibernate"
-    }
-  }
+      "hibernate": "tools.sh hibernate",
+    },
+  },
 }
