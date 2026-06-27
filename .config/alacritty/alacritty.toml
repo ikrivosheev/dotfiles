@@ -12,24 +12,24 @@ background = "#131313"
 foreground = "#DDDDDD"
 
 [colors.normal]
-black = "#DDDDDD"
+black = "#000000"
 red = "#c74028"
 green = "#62BA46"
 yellow = "#ded9b7"
 blue = "#c28b12"
 magenta = "#c72855"
 cyan = "#fdd888"
-white = "#131313"
+white = "#DDDDDD"
 
 [colors.bright]
-black = "#57564F"
+black = "#303030"
 red = "#e7988a"
 green = "#b0dca2"
 yellow = "#f0edde"
 blue = "#f1c464"
 magenta = "#efb0c2"
 cyan = "#fef1d5"
-white = "#303030"
+white = "#e5e5e5"
 
 [cursor]
 style = "Block"
